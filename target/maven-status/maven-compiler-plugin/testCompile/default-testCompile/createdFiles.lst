@@ -1,0 +1,6 @@
+tests\TC_Demo.class
+tests\TC_Standings.class
+com\apitest\ferrari\AppTest.class
+tests\TC_Status.class
+tests\TC_Circuits.class
+tests\TC_Seasons.class
