@@ -20,17 +20,14 @@ public class TC_Status {
     }
     @Test(description = " verify the number of finished races along with driver name and year", dataProvider = "yearandrank")
     public void validatingStandingsInfo(String seasonYear,String position,String name,String count) {
-        //Convert ResponseBody to String
+     
         String dataPath = "MRData.StatusTable";
         String responseBody=given().pathParam("year",seasonYear)
         .pathParam("driver",name).when().get("http://ergast.com/api/f1/{year}/drivers/{driver}/status.json").getBody()
         .asString();
-        //Create JsonPath Object by Passing the Response Body as a string
+       
         JsonPath resJson=new JsonPath(responseBody);
-        //Fetch the attribute value series under MRData
-        
-        //System.out.println(seriesName);
-        // User TestNg Assertion
+       
         List<Map<String, String>> status = resJson.getList(dataPath+".Status");
         System.out.println(status);
             for (int i =0;i<status.size();i++){
