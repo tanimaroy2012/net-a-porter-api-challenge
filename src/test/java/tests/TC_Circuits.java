@@ -11,9 +11,6 @@ import org.testng.annotations.Test;
 
 public class TC_Circuits {
 
-    String season = "2017";
-    int numberOfRaces = 20;
-
     @Test(description = "Number Of Circuits In 2017 Season Should Be 20")
     public void validatingContentLengthOfCircuits() {
         given().when().get("http://ergast.com/api/f1/2017/circuits.json").then().assertThat()
