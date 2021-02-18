@@ -47,7 +47,7 @@ public class TC_Standings {
                 {"1990",8,"British"}
         };
     }
-    @Test(description = " verify various ranks and driverid against year", dataProvider = "yearwisecount")
+    @Test(description = " verify count of drivers based on nationality against year", dataProvider = "yearwisecount")
     public void validatingConstructorInfo(String seasonYear,int count,String nationality) {
         
         String dataPath = "MRData.ConstructorTable.Constructors";
