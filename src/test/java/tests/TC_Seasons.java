@@ -20,7 +20,7 @@ public class TC_Seasons {
         assertEquals("6",seriesName);
     }
 
-    @Test(description = " to list number of seasons where a specific driver has driven for a particular constructor")
+    @Test(description = "verify the driver stanings")
     public void validatingDriverVictory() {
         //Convert ResponseBody to String
         String responseBody=given().when().get("http://ergast.com/api/f1/drivers/alonso/driverStandings/1/seasons.json").getBody().asString();
@@ -32,7 +32,7 @@ public class TC_Seasons {
         assertEquals("2",seriesName);
     }
 
-    @Test(description = " to list number of seasons where a specific driver has driven for a particular constructor")
+    @Test(description = " verify constructor standings")
     public void validatingrenaultVictory() {
         //Convert ResponseBody to String
         String responseBody=given().when().get("http://ergast.com/api/f1/constructors/renault/constructorStandings/1/seasons.json").getBody().asString();
@@ -44,7 +44,7 @@ public class TC_Seasons {
         assertEquals("2",seriesName);
     }
 
-    @Test(description = " to list number of seasons where a specific driver has driven for a particular constructor")
+    @Test(description = " verify the fastest result for first place and under which series")
     public void validatingCurrent() {
         //Convert ResponseBody to String
         String responseBody=given().when().get("http://ergast.com/api/f1/2010/1/fastest/1/results.json").getBody().asString();
